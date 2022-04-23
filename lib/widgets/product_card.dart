@@ -21,7 +21,6 @@ class _ProductCardState extends State<ProductCard> {
         padding: const EdgeInsets.only(bottom: 8.0),
         child: Stack(
           children: [
-            
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -76,7 +75,8 @@ class _ProductCardState extends State<ProductCard> {
             Align(
               alignment: Alignment.topLeft,
               child: Container(
-                margin: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(8.0),
+                width: 10.sp,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: BACKGROUND_COLOR,
@@ -84,13 +84,13 @@ class _ProductCardState extends State<ProductCard> {
                 child: Row(
                   children: [
                     Text(widget.product.price.toString()),
+                    SizedBox(width: 6),
                     Icon(
-                        Icons.star,
-                        color: Colors.yellow,
-                      ),
+                      Icons.star,
+                      color: Colors.yellow,
+                    ),
                   ],
                 ),
-                 
               ),
             ),
             Align(
@@ -98,13 +98,12 @@ class _ProductCardState extends State<ProductCard> {
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: IconButton(
-                    icon: Icon(
-                      Icons.favorite_border,
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
+                  icon: Icon(
+                    Icons.favorite_border,
+                    color: Colors.white,
                   ),
-                 
+                  onPressed: () {},
+                ),
               ),
             ),
             Positioned(
