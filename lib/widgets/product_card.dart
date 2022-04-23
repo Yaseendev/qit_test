@@ -75,16 +75,18 @@ class _ProductCardState extends State<ProductCard> {
             Align(
               alignment: Alignment.topLeft,
               child: Container(
-                padding: const EdgeInsets.all(8.0),
-                width: 10.sp,
+                padding: const EdgeInsets.all(4.0),
+                margin: const EdgeInsets.all(4.0),
+                width: 56.sp,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
                   color: BACKGROUND_COLOR,
                 ),
                 child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     Text(widget.product.price.toString()),
-                    SizedBox(width: 6),
+                    SizedBox(width: 2),
                     Icon(
                       Icons.star,
                       color: Colors.yellow,
